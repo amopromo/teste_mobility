@@ -1,5 +1,5 @@
 import http.client
-# import mimetypes
+
 
 HOST = "b2b.mobility.com.br"
 
@@ -29,8 +29,6 @@ def connect(user, pwd):
         'Content-Type': 'application/soap+xml;charset=UTF-8',
         'Host': HOST,
         'Connection': "Keep-Alive",
-        # "Content-Length": len(final_payload),
-        # "User-Agent": "Python HTTP client"
     }
 
     print(headers)
@@ -56,4 +54,7 @@ def connect(user, pwd):
 
 
 if __name__ == '__main__':
-    connect("JXkXUw9uFdprEO3BOHo+aQ==", "8Jmr4d6VpyGaQPY1NR1uOw==")
+    import sys
+    user = sys.argv[1]
+    pwd = sys.argv[2]
+    connect(user, pwd)
