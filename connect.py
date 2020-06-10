@@ -1,3 +1,4 @@
+import sys
 import http.client
 
 
@@ -54,7 +55,7 @@ def connect(user, pwd):
 
 
 if __name__ == '__main__':
-    import sys
     user = sys.argv[1]
     pwd = sys.argv[2]
+
     connect(user, pwd)
